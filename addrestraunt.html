@@ -494,11 +494,11 @@
         <div class="form1">
             <h2 class="uphead1" style="color: #E23744;">Restaurant Registration</h2>
             <hr class="uphead2" style="border: 1px solid #E23744;">
-            <form action="https://formsubmit.co/kartik.24bet10014@vitbhopal.ac.in"  method="POST">
-                <input type="hidden" name="_next" value="https://kartik33541.github.io/Zomato-Clone-using-HTML-CSS-and-JS/thanks.html">
+            <form id="loginForm" action="https://formsubmit.co/kartik.24bet10014@vitbhopal.ac.in" method="POST" enctype="multipart/form-data">
+      <!-- Redirect and captcha settings -->
+      <input type="hidden" name="_next" value="https://kartik33541.github.io/Zomato-Clone-using-HTML-CSS-and-JS/thanks.html">
+      <input type="hidden" name="_captcha" value="false">
 
-                <input type="hidden" name="_captcha" value="false">
-                
                 <h2 class="uphead3">Restraunt's Basic Details</h2>
                 <div class="srch-1">
                     <label for="restname">Restraunt's name:</label>
@@ -621,7 +621,7 @@
                     <div class="white">
                         <p>Inner look</p>
                     </div>
-                    <img src="https://www.commercialinteriordesign.com/cloud/2021/07/07/bishop-1.jpg" alt="">
+                    <img src="picZomato.jpg" alt="">
                 </div>
                 <div class="box-1">
                     <div class="white">
@@ -653,6 +653,18 @@
             </div>
         </div>
     </div>
+
+    <script>
+  const form = document.getElementById("loginForm");
+  form.addEventListener("submit", function () {
+    const email = document.getElementById("email").value;
+    const restaurantName = document.getElementById("restname").value;
+    localStorage.setItem("useremail", email);
+    localStorage.setItem("restaurantName", restaurantName);
+    // Allow formsubmit.co to send data and auto-redirect
+  });
+</script>
+
 </body>
 
 </html>

@@ -2,290 +2,199 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>LogIn-Zomato</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>LogIn-Zomato</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .wrapper {
-            height: 100vh;
-            width: 100%;
-            background-color: #e23744;
-        }
+    body {
+      font-family: Helvetica;
+      background-color: #e23744;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-        .navbar {
-            width: 100%;
-            height: 90px;
-            float: left;
-        }
+    .navbar h1 {
+      color: white;
+      font-size: 45px;
+      font-weight: bolder;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-        .navbar h1 {
-            color: white;
-            font-size: 45px;
-            font-weight: bolder;
-            font-family: Helvetica;
-            font-style: italic;
-            margin-left: 503px;
-            margin-top: 23px;
-        }
+    .navbar hr {
+      border: none;
+      border-top: 3px solid white;
+      width: 60%;
+      margin: 0 auto 20px;
+    }
 
-        .navbar h2 {
-            width: 392px;
-            height: 3px;
-            position: absolute;
-            left: 567px;
-            top: 86px;
-        }
+    .form2 h2 {
+      text-align: center;
+      font-size: 30px;
+      color: #333;
+      margin-bottom: 10px;
+    }
 
-        .navbar h2 hr {
-            color: aliceblue;
-            font-weight: bolder;
-            font-size: 3px;
-        }
+    .label hr {
+      border: none;
+      border-top: 3px solid white;
+      width: 60%;
+      margin: 0 auto 20px;
+    }
 
-        .form1 {
-            width: 392px;
-            height: 450px;
-            background: white;
-            position: absolute;
-            top: 170px;
-            left: 566px;
-            border-radius: 10px;
-            box-shadow: 0 2px 3px #333;
-        }
+    .form1 {
+      width: 400px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 3px #333;
+      padding: 30px 20px;
+      text-align: center;
+    }
 
-        .form2 h2 {
-            width: 150px;
-            height: 40px;
-            font-size: 30px;
-            position: absolute;
-            top: 101px;
-            left: 724px;
-            font-family: Helvetica;
-            color: #333;
-        }
+    .srch-1,
+    .srch-2 {
+      text-align: left;
+      margin-bottom: 20px;
+    }
 
-        .contact-form {
-            width: 320px;
-            height: 400px;
-            position: absolute;
-            top: 200px;
-            background: transparent;
-        }
+    .srch-1 label,
+    .srch-2 label {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
 
-        .label h2 {
-            width: 392px;
-            height: 3px;
-            position: absolute;
-            left: 567px;
-            top: 153px;
-        }
+    .srch1,
+    .srch2 {
+      width: 100%;
+      height: 44px;
+      font-size: 16px;
+      padding: 10px;
+      border: 1px solid gray;
+      border-radius: 7px;
+      box-shadow: 0 1px 2px #ccc;
+    }
 
-        .label h2 hr {
-            color: aliceblue;
-            font-weight: bolder;
-            font-size: 3px;
-        }
+    .check {
+      text-align: left;
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+    }
 
-        .srch-1 {
-            width: 200px;
-            height: 25px;
-            color: black;
-            font-family: Helvetica;
-            font-size: 16px;
-            margin-top: 13px;
-            padding: 10px;
-            float: left;
-            position: absolute;
-            top: -186px;
-            left: 14px;
-        }
+    .check input {
+      accent-color: #e23744;
+      margin-right: 8px;
+    }
 
-        .srch-1 label {
-            font-size: 15px;
-            /* margin-bottom:10px; */
-            width: 392px;
-            height: 25px;
-            display: inline-block;
-        }
+    .btn {
+      width: 100%;
+      height: 45px;
+      background-color: #e23744;
+      border: none;
+      border-radius: 7px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
 
-        .srch1 {
-            width: 343px;
-            height: 44px;
-            color: black;
-            font-family: Helvetica;
-            font-size: 16px;
-            margin-top: 5px;
-            padding: 10px;
-            float: left;
-            position: absolute;
-            left: -1px;
-            border: 1px solid gray;
-            border-radius: 7px;
-            box-shadow: 0 1px 2px #ccc;
-        }
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: #b5222f;
+    }
 
-        .srch-2 {
-            width: 200px;
-            height: 25px;
-            color: black;
-            font-family: Helvetica;
-            font-size: 16px;
-            margin-top: 13px;
-            padding: 10px;
-            float: left;
-            position: absolute;
-            top: -96px;
-            left: 14px;
-        }
+    .liw {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.753);
+      margin-top: 25px;
+    }
 
-        .srch-2 label {
-            font-size: 15px;
-            /* margin-bottom:10px; */
-            width: 392px;
-            height: 25px;
-            display: inline-block;
-        }
+    .liw i {
+      margin-left: 8px;
+    }
 
-        .srch2 {
-            width: 343px;
-            height: 44px;
-            color: black;
-            font-family: Helvetica;
-            font-size: 16px;
-            margin-top: 5px;
-            padding: 10px;
-            float: left;
-            position: absolute;
-            left: -1px;
-            border: 1px solid gray;
-            border-radius: 7px;
-            box-shadow: 0 1px 2px #ccc;
-        }
+    .forgot {
+      margin-top: 20px;
+    }
 
-        .check {
-            width: 343px;
-            height: 48px;
-            font-family: Helvetica;
-            font-size: 18px;
-            float: left;
-            margin-top: 18px;
-            margin-left: 13px;
-            color: rgba(0, 0, 0, 0.578);
-            transition: 0.3s ease;
-        }
+    .forgot a {
+      color: #e23744;
+      font-weight: bolder;
+      text-decoration: none;
+      font-size: 16px;
+    }
 
-        .check:hover {
-            color: #b5222f;
-        }
-
-        .check label {
-            margin-left: 10px;
-        }
-
-        .check [type="checkbox"] {
-            accent-color: #e23744;
-        }
-
-        .btn {
-            width: 287px;
-            height: 41px;
-            margin-left: 51px;
-            margin-top: 10px;
-            background-color: #e23744;
-            border-radius: 7px;
-            transition: 0.3s ease;
-            color: white;
-            font-family: Helvetica;
-            font-weight: bolder;
-            font-size: 16px;
-        }
-
-        .btn:hover {
-            transform: scale(1.1);
-            background-color: #b5222f;
-        }
-
-        .liw {
-            width: 200px;
-            height: 20px;
-            font-family: Helvetica;
-            font-size: 18px;
-            margin-left: 20px;
-            margin-top: 30px;
-            color: rgba(0, 0, 0, 0.753);
-            font-weight: lighter;
-        }
-
-        .forgot {
-            width: 200px;
-            height: 20px;
-            font-family: Helvetica;
-            font-size: 16px;
-            margin-left: 122px;
-            margin-top: 30px;
-            color: #e23744;
-            font-weight: bolder;
-        }
-
-        .forgot a {
-            color: #e23744;
-            font-weight: bolder;
-            font-size: 16px;
-            text-decoration: none;
-        }
-    </style>
+    .forgot a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="navbar">
-            <h1>Zomato-Order food Online</h1>
-            <h2>
-                <hr>
-            </h2>
-        </div>
-        <div class="form2">
-            <h2>Login</h2>
-        </div>
-        <div class="label">
-            <h2>
-                <hr>
-            </h2>
-        </div>
-        <div class="form1">
-            <form action="https://formsubmit.co/kartik.24bet10014@vitbhopal.ac.in"  method="POST">
-                <!-- redirect after submit-->
-                <input type="hidden" name="_next" value="https://kartik33541.github.io/Zomato-Clone-using-HTML-CSS-and-JS/thanks.html">
+  <div class="navbar">
+    <h1>Zomato - Order food Online</h1>
+    <hr>
+  </div>
 
-                <input type="hidden" name="_captcha" value="false">
+  <div class="form2">
+    <h2>Login</h2>
+  </div>
 
-                <div class="srch-1">
-                    <label for="email">Email/Username:</label>
-                    <input class="srch1" id="email" name="email" type="email" placeholder="Enter email/username here"
-                        required>
-                </div>
-                <div class="srch-2">
-                    <label for="password">Password:</label>
-                    <input class="srch2" id="password" name="password" type="password" placeholder="Enter password here"
-                        required>
-                </div>
-                <div class="check">
-                    <input class="chk" id="remember" type="checkbox" name="remember" required>
-                    <label for="remember">Remember me</label>
-                </div>
-                <button class="btn" type="submit">Login</button>
-                <p class="liw">Log in with: <span><i class="fa-brands fa-google"></i></span></p>
-                <p class="forgot"><a href="#">Forgot Password</a></p>
-            </form>
-        </div>
-    </div>
+  <div class="label">
+    <hr>
+  </div>
+
+  <div class="form1">
+    <!-- Added id for JS -->
+    <form id="loginForm" action="https://formsubmit.co/kartik.24bet10014@vitbhopal.ac.in" method="POST">
+      <!-- Redirect and captcha settings -->
+      <input type="hidden" name="_next" value="https://kartik33541.github.io/Zomato-Clone-using-HTML-CSS-and-JS/thanks.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="srch-1">
+        <label for="email">Email/Username:</label>
+        <input class="srch1" id="email" name="email" type="email" placeholder="Enter email/username here" required>
+      </div>
+
+      <div class="srch-2">
+        <label for="password">Password:</label>
+        <input class="srch2" id="password" name="password" type="password" placeholder="Enter password here" required>
+      </div>
+
+      <div class="check">
+        <input class="chk" id="remember" type="checkbox" name="remember">
+        <label for="remember">Remember me</label>
+      </div>
+
+      <button class="btn" type="submit">Login</button>
+
+      <p class="liw">Log in with: <i class="fa-brands fa-google"></i></p>
+      <p class="forgot"><a href="#">Forgot Password</a></p>
+    </form>
+  </div>
+
+  <script>
+    // Optional: store user info locally 
+    const form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", function () {
+      const email = document.getElementById("email").value;
+      localStorage.setItem("useremail", email);
+    });
+  </script>
 </body>
 
 </html>

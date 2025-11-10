@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Restraunt-Zomato</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 227vh;
+            background-color: #e23744;
+            z-index: -1;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 125px;
+            float: left;
+        }
+
+        .navbar h1 {
+            font-size: 36px;
+            color: white;
+            margin-left: 500px;
+            margin-top: 68px;
+        }
+
+        .img {
+            position: absolute;
+            left: -35px;
+            top: -47px;
+        }
+
+        .navbar h2 {
+            width: 410px;
+            height: 5px;
+            position: absolute;
+            left: 560px;
+            top: 120px;
+        }
+
+        .navbar h2 hr {
+            color: aliceblue;
+            font-weight: bolder;
+            font-size: 5px;
+        }
+
+        .form1 {
+            width: 530px;
+            height: 103vh;
+            background-color: white;
+            float: left;
+            position: absolute;
+            top: 181px;
+            left: 478px;
+            border-radius: 16px;
+            padding: 30px 40px;
+            box-shadow: 0 2px 3px #333;
+            margin-bottom: 20px;
+        }
+
+        .uphead1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .uphead2 {
+            width: 400px;
+            margin-left: -20px;
+            margin-bottom: 10px;
+        }
+
+        .uphead3 {
+            color: #333;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        .srch-1,
+        .srch-2,
+        .srch-3,
+        .srch-4,
+        .srch-7,
+        .srch-8 {
+            width: 460px;
+            height: 45px;
+            margin-top: 10px;
+        }
+
+        .srch-1,
+        .srch-2,
+        .srch-3,
+        .srch-4,
+        .srch-5,
+        .srch-7,
+        .srch-8 label {
+            font-size: 17px;
+            color: #333;
+        }
+
+        .srch1,
+        .srch2,
+        .srch3,
+        .srch4,
+        .srch7,
+        .srch8 {
+            width: 260px;
+            height: 44px;
+            font-size: 16px;
+            color: black;
+            margin-left: 8px;
+            border-radius: 7px;
+            border: 1px solid gray;
+            box-shadow: 0 1px 2px gray;
+            transition: 0.3s ease;
+        }
+
+        .srch1:hover {
+            box-shadow: 0 2px 3px #e23744;
+        }
+
+        .srch2:hover {
+            box-shadow: 0 2px 3px #e23744;
+        }
+
+        .srch3:hover {
+            box-shadow: 0 2px 3px #e23744;
+        }
+
+        .srch4:hover {
+            box-shadow: 0 2px 3px #e23744;
+        }
+
+        .srch5:hover {
+            box-shadow: 0 2px 3px #e23744;
+        }
+
+        .srch6:hover {
+            box-shadow: 0 2px 3px #e23744;
+        }
+
+        .srch7:hover {
+            box-shadow: 0 2px 3px #e23744;
+        }
+
+        .srch8:hover {
+            box-shadow: 0 2px 3px #e23744;
+        }
+
+        .srch-5 {
+            width: 460px;
+            height: 45px;
+            margin-top: 10px;
+        }
+
+        .srch5 {
+            width: 260px;
+            height: 44px;
+            font-size: 16px;
+            color: black;
+            margin-left: 8px;
+            border-radius: 7px;
+            border: 1px solid gray;
+            box-shadow: 0 1px 2px gray;
+            transition: 0.3s ease;
+        }
+
+        .srch-6 {
+            width: 500px;
+            height: 45px;
+            margin-top: 10px;
+        }
+
+        .srch-6 label {
+            font-size: 17px;
+            color: #333;
+        }
+
+        .srch6 {
+            width: 360px;
+            height: 44px;
+            font-size: 16px;
+            color: black;
+            margin-left: 8px;
+            border-radius: 7px;
+            border: 1px solid gray;
+            box-shadow: 0 1px 2px gray;
+            transition: 0.3s ease;
+        }
+
+        /* .footer {
+            width: 100vw;
+            margin: 0 20px;
+            height: 150px;
+            background-color: aqua;
+            position:absolute;
+            bottom:-809px;
+            right:-14px;
+        } */
+
+        .uphead4 {
+            color: #333;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        .extra-details {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            background-color: rgb(244, 244, 253);
+            color: #333;
+            z-index: 999;
+            position: absolute;
+        }
+
+        .extra-details label {
+            display: block;
+            margin-top: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .extra-details h3 {
+            font-size: 18px;
+        }
+
+        .extra-details input,
+        .extra-details select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid gray;
+            font-size: 17px;
+            color: black;
+        }
+
+        .bg1 {
+            border: 1px solid gray;
+            transition: 0.3s ease;
+        }
+
+        .bg1:hover {
+            box-shadow: 0 1px 2px #E23744;
+        }
+
+        .bg2 {
+            color: #333;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+        }
+
+        .cuisine-options {
+            display: flex;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            width: 300px;
+            height: 44px;
+            background-color: #E23744;
+            margin-top: 20px;
+            border-radius: 7px;
+            box-shadow: 0 1px 2px gray;
+            font-size: 17px;
+            color: white;
+            font-weight: bolder;
+            border: 1px solid gray;
+            transition: 0.3s ease;
+            margin-left: 80px;
+        }
+
+        .btn:hover {
+            background-color: #b5222f;
+            transform: scale(1.1);
+        }
+
+        .bg3 {
+            transition: 0.3s ease;
+            box-shadow: 0 1px 2px gray;
+        }
+
+        .bg3:hover {
+            box-shadow: 0 1px 2px #E23744;
+        }
+
+        .preview-card {
+            width: 1400px;
+            height: 550px;
+            background-color: rgb(244, 244, 253);
+            position: absolute;
+            top: 1050px;
+            left: 50px;
+            border-radius: 18px;
+            box-shadow: 0 2px 4px gray;
+            border: 1px solid gray;
+            z-index: 2;
+        }
+        .label1{
+            width:950px;
+            height:3px;
+            color:#333;
+            margin-left:210px;
+            margin-top:350px;
+            margin-bottom:20px;
+        }
+        .footer p{
+            text-align: center;
+            color:#333;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .html{
+            scroll-behavior: smooth;
+        }
+
+        .bg4 {
+            color: #333;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 24px;
+            margin-top: 16px;
+            margin-bottom: 14px;
+            margin-left: 20px;
+        }
+
+        .under {
+            color: #333;
+            font-size: 18px;
+            letter-spacing: 1px;
+            line-height: 30px;
+            margin-left: 20px;
+            margin-top: 20px;
+            width: 400px;
+            height: 65px;
+        }
+
+        .sec-1 {
+            display: flex;
+            justify-content: center;
+            /* margin-bottom: 13vh; */
+            margin-top: 400px;
+        }
+
+        .box {
+            position: absolute;
+            width: 295px;
+            margin: 3px 10px;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: rgba(243, 240, 240);
+            box-shadow: 0 1px 2px gray;
+            transition: 0.3s ease;
+            top: 240px;
+            left: 30px;
+        }
+
+        .box-1 {
+            position: absolute;
+            width: 295px;
+            height: 202px;
+            margin: 3px 10px;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: rgba(243, 240, 240);
+            box-shadow: 0 1px 2px gray;
+            transition: 0.3s ease;
+            top: 240px;
+            left: 370px;
+        }
+
+        .box-2 {
+            position: absolute;
+            width: 295px;
+            height: 202px;
+            margin: 3px 10px;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: rgba(243, 240, 240);
+            box-shadow: 0 1px 2px gray;
+            transition: 0.3s ease;
+            top: 240px;
+            left: 710px;
+        }
+
+        .box-3 {
+            position: absolute;
+            width: 295px;
+            height: 202px;
+            margin: 3px 10px;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: rgba(243, 240, 240);
+            box-shadow: 0 1px 2px gray;
+            transition: 0.3s ease;
+            top: 240px;
+            left: 1050px;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+            box-shadow: 1px 6px 7px #E23744;
+        }
+
+        .box-1:hover {
+            transform: scale(1.1);
+            box-shadow: 1px 6px 7px #E23744;
+        }
+
+        .box-2:hover {
+            transform: scale(1.1);
+            box-shadow: 1px 6px 7px #E23744;
+        }
+
+        .box-3:hover {
+            transform: scale(1.1);
+            box-shadow: 1px 6px 7px #E23744;
+        }
+
+        .box img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(204, 203, 203);
+            z-index: -1;
+        }
+
+        .box-1 img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(204, 203, 203);
+            z-index: -1;
+        }
+
+        .box-2 img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(204, 203, 203);
+            z-index: -1;
+        }
+
+        .box-3 img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(204, 203, 203);
+            z-index: -1;
+        }
+
+        .white {
+            position: absolute;
+            bottom: 0px;
+            align-items: center;
+            border-radius: 0 0 15px 15px;
+            background-color: #fff;
+            width: 100%;
+            height: 25%;
+            z-index: 2;
+        }
+
+        .white p {
+            /* text-align: center; */
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1em;
+            color: rgba(56, 56, 56);
+            letter-spacing: 0.7px;
+            margin-top: 10px;
+            margin-left: 85px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <h1>Add Your Restraunt to Zomato</h1>
+            <div class="label">
+                <h2>
+                    <hr>
+                </h2>
+            </div>
+            <div class="img">
+                <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202102/zomato_logo_660_250221102710.jpg?size=948:533"
+                    alt="" height="180">
+            </div>
+        </div>
+        <div class="form1">
+            <h2 class="uphead1" style="color: #E23744;">Restaurant Registration</h2>
+            <hr class="uphead2" style="border: 1px solid #E23744;">
+            <form action="https://formsubmit.co/kartik.24bet10014@vitbhopal.ac.in"  method="POST">
+                <input type="hidden" name="_next" value="https://kartik33541.github.io/Zomato-Clone-using-HTML-CSS-and-JS/thanks.html">
+
+                <input type="hidden" name="_captcha" value="false">
+                
+                <h2 class="uphead3">Restraunt's Basic Details</h2>
+                <div class="srch-1">
+                    <label for="restname">Restraunt's name:</label>
+                    <input class="srch1" id="restname" name="restname" type="text" placeholder=" Enter restraunt name "
+                        required>
+                </div>
+                <div class="srch-2">
+                    <label for="ownername">Owner Name:</label>
+                    <input class="srch2" id="ownername" name="ownername" type="text" placeholder=" Enter owner's name"
+                        required>
+                </div>
+                <div class="srch-3">
+                    <label for="phone">Contact no.</label>
+                    <input class="srch3" id="phone" name="phone" type="tel" placeholder=" Enter contact number"
+                        required>
+                </div>
+                <div class="srch-4">
+                    <label for="email">Official Email:</label>
+                    <input class="srch4" id="email" name="email" type="email" placeholder=" Enter email" required>
+                </div>
+                <h2 class="uphead3">Restaurant Address</h2>
+                <div class="srch-5">
+                    <label for="location">State/City:</label>
+                    <select class="srch5" id="location" name="location" required>
+                        <option class="srch5" value="" disabled selected> Select Location</option>
+                        <option value="Delhi NCR">Delhi NCR</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bengaluru">Bengaluru</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Guwahati">Guwahati</option>
+                        <option value="Ganganagar">Ganganagar</option>
+                    </select>
+                </div>
+                <div class="srch-6">
+                    <label for="fullAddress">Full Address:</label>
+                    <textarea class="srch6" id="fullAddress" name="fullAddress"
+                        placeholder=" Enter the complete address of your restaurant..." required></textarea>
+                </div>
+                <div class="srch-7">
+                    <label for="landmark">Landmark:</label>
+                    <input class="srch7" id="landmark" name="landmark" type="text" placeholder=" Enter landmark name"
+                        required>
+                </div>
+                <div class="srch-8">
+                    <label for="password">Pincode/Zipcode:</label>
+                    <input class="srch8" id="password" name="password" type="password" placeholder=" Enter PIN/ZIP "
+                        required>
+                </div>
+                <h2 class="uphead4">More Details...</h2>
+
+                <!-- Section C Checkbox -->
+                <div class="section-toggle">
+                    <label>
+                        <input type="checkbox" id="toggleDetails" onchange="toggleExtraDetails()"> I want to provide
+                        more details
+                    </label>
+                </div>
+
+                <!-- Extra Details Section -->
+                <div class="extra-details" id="extraDetailsSection" style="display: none;">
+                    <h3>Additional Restaurant Details</h3>
+
+                    <label class="bg2" for="type">Restaurant Type</label>
+                    <select class="bg1" id="type" name="type">
+                        <option value="">Select Type</option>
+                        <option value="Casual Dining">Casual Dining</option>
+                        <option value="Cafe">Cafe</option>
+                        <option value="Quick Bites">Quick Bites</option>
+                        <option value="Dessert Parlor">Dessert Parlor</option>
+                    </select>
+
+                    <label class="bg2">Cuisine Types</label>
+                    <div class="cuisine-options">
+                        <label><input type="checkbox" name="cuisine" value="Indian"> Indian</label>
+                        <label><input type="checkbox" name="cuisine" value="Chinese"> Chinese</label>
+                        <label><input type="checkbox" name="cuisine" value="Italian"> Italian</label>
+                        <label><input type="checkbox" name="cuisine" value="South Indian"> South Indian</label>
+                    </div>
+
+                    <label class="bg2" for="cost">Average Cost for Two (₹)</label>
+                    <input class="bg3" type="number" id="cost" name="cost" placeholder="e.g. 500">
+
+                    <label class="bg2" for="hours">Opening Hours</label>
+                    <input class="bg3" type="text" id="hours" name="hours" placeholder="e.g. 10:00 AM - 10:00 PM">
+
+                    <label class="bg2" for="image">Upload Restaurant Image</label>
+                    <input class="bg3" type="file" id="image" name="image" accept="image/*">
+                </div>
+
+                <!-- JS Script -->
+                <script>
+                    function toggleExtraDetails() {
+                        const section = document.getElementById("extraDetailsSection");
+                        section.style.display = section.style.display === "none" ? "block" : "none";
+                    }
+                </script>
+                <button class="btn" type="submit">Add Restraunt</button>
+
+            </form>
+        </div>
+        <div class="preview-card">
+            <h3 class="bg4">✨ See how your restaurant will appear:</h3>
+            <div class="under">
+                <h4>🍽️ The Royal Taste</h4>
+                <p>📍 Hanumangarh, Rajasthan - 335513</p>
+                <p>👤 Owner: Ramesh Kumar</p>
+                <p>🍱 Cuisine: North Indian, Chinese</p>
+            </div>
+            <section class="sec1">
+                <div class="box">
+                    <div class="white">
+                        <p>Inner look</p>
+                    </div>
+                    <img src="https://www.commercialinteriordesign.com/cloud/2021/07/07/bishop-1.jpg" alt="">
+                </div>
+                <div class="box-1">
+                    <div class="white">
+                        <p>Signauture Cuisine</p>
+                    </div>
+                    <img src="https://media.radissonhotels.net/image/radisson-blu-hotel-ludhiana/restaurant/16256-116515-f64878725_3xl.jpg?impolicy=Card"
+                        alt="">
+                </div>
+                <div class="box-2">
+                    <div class="white">
+                        <p>Alfressco Area</p>
+                    </div>
+                    <img src="https://static.thehoneycombers.com/wp-content/uploads/sites/2/2022/08/Caffe-Fernet-alfresco-dining-in-singapore.png"
+                        alt="">
+                </div>
+                <div class="box-3">
+                    <div class="white">
+                        <p>Dining</p>
+                    </div>
+                    <img src="https://cdn0.weddingwire.ca/article-vendor/1702/3_2/1280/jpeg/roof-3_50_11702-164383192387566.jpeg"
+                        alt="">
+                </div>
+            </section>
+            <div class="label1">
+                <h1><hr></h1>
+            </div>
+            <div class="footer">
+                <p>Made with love ❤️</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

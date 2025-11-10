@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato-India</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            height: 70vh;
+            overflow: hidden;
+            position: relative;
+            object-fit: cover;
+            margin-bottom: 7vh;
+        }
+
+        .header-image {
+            position: absolute;
+            top: -20vh;
+            z-index: -1;
+        }
+
+        .nav {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            font-size: 1em;
+            color: #fff;
+            font-family: Verdana;
+            margin: 1vh 10vw;
+        }
+
+        .nav-bar {
+            display: flex;
+        }
+
+        .nav-bar li {
+            list-style: none;
+            font-size: 1em;
+            font-family: Verdana;
+            font-weight: lighter;
+            padding-left: 30px;
+        }
+
+        .heading {
+            font-weight: lighter;
+            font-size: 1em;
+        }
+
+        .image {
+            width: 300px;
+            height: 40px;
+            position: absolute;
+            left: 491px;
+            top: 137px;
+        }
+
+        .disc {
+            width: 800px;
+            height: 45px;
+            position: absolute;
+            left: 341px;
+            top: 251px;
+            color: #fff;
+            font-size: 23px;
+            font-family: Arial;
+            font-weight: light;
+        }
+
+        .search {
+            width: 700px;
+            height: 60px;
+            position: absolute;
+            left: 409px;
+            top: 330px;
+            display: flex;
+        }
+
+        .par {
+            width: 300px;
+            height: 40px;
+            background: #fff;
+            color: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            float: left;
+            padding-top: 15px;
+            border-bottom-left-radius: 7px;
+            border-top-left-radius: 7px;
+            transition: 0.3s ease;
+        }
+
+        .par:hover {
+            color: #C3212E;
+        }
+
+        .ig {
+            width: 300px;
+            height: 40px;
+            background: #fff;
+            color: rgba(0, 0, 0, 0.366);
+            text-align: left;
+            float: left;
+            position: absolute;
+            left: 300px;
+            top: 16px;
+            padding-top: 15px;
+        }
+
+        .ig input {
+            font-size: 15px;
+            width: 250px;
+            height: 30px;
+            color: rgba(0, 0, 0, 0.48);
+            border: 1px solid #fff;
+            float: left;
+            position: absolute;
+            top: 8px;
+            outline: none;
+        }
+
+        .par2 {
+            width: 27px;
+            height: 20px;
+            background: #fff;
+            float: left;
+            position: absolute;
+            top: 363px;
+            left: 683px;
+            color: rgba(0, 0, 0, 0.366);
+        }
+
+        .btn {
+            width: 100px;
+            height: 55px;
+            color: rgba(0, 0, 0, 0.366);
+            background: #E23744;
+            border: 2px solid #E23744;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            margin-top: 13px;
+            font-size: 15px;
+            float: left;
+            position: absolute;
+            top: 333px;
+            left: 1007px;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #C3212E;
+        }
+
+        .nav-bar li a{
+            transition: 0.3s ease;
+            text-decoration: none;
+            color:white;
+        }
+
+        .nav-bar li a:hover {
+            color: rgba(252, 119, 119);
+        }
+
+        .line {
+            width: 10px;
+            height: 40px;
+            background: #fff;
+            float: left;
+            position: absolute;
+            top: 353px;
+            left: 664px;
+            color: rgba(0, 0, 0, 0.4);
+            font-size: 30px;
+        }
+
+        .search i:first-child {
+            color: rgba(252, 119, 119);
+            font-size: 20px;
+        }
+
+        .sec-1 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 13vh;
+        }
+
+        .box {
+            position: relative;
+            width: 265px;
+            margin: 3px 10px;
+            overflow: hidden;
+            border-radius: 15px;
+            background-color: rgba(243, 240, 240);
+            box-shadow: 0 1px 2px gray;
+            transition: 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+            box-shadow: 1px 6px 7px #E23744;
+        }
+
+        .box img {
+            width: 100%;
+            border-radius: 15px;
+            border: 1px solid rgba(204, 203, 203);
+            z-index: -1;
+        }
+
+        .white {
+            position: absolute;
+            bottom: 3px;
+            align-items: center;
+            border-radius: 0 0 15px 15px;
+            background-color: #fff;
+            width: 100%;
+            height: 25%;
+            z-index: 2;
+        }
+
+        .white p {
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1em;
+            color: rgba(56, 56, 56);
+            letter-spacing: 0.7px;
+        }
+
+        .middle {
+            margin: 60px 150px;
+        }
+
+        .sec-2 h2 {
+            font-size: 2.7rem;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+
+        .sec-2 div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .sec-2 h6 {
+            margin: 0;
+            font-size: 1rem;
+            color: rgb(99, 98, 98);
+            font-weight: lighter;
+        }
+
+        .sec-2 span i {
+            color: #E23744;
+            font-size: 1.3rem;
+        }
+
+        .sec-2 span {
+            color: #E23744;
+        }
+
+        /* .sec-2 span{
+            transition: 0.3s ease;
+        }
+        .sec-2 span:hover{
+            color:rgba(252,119,119);
+        } */
+
+        .sec-2 span {
+            position: relative;
+        }
+
+        .sec-2 span::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: rgb(99, 98, 98);
+            position: absolute;
+            left: 0;
+            bottom: -.5rem;
+            transition: width .4s;
+        }
+
+        .sec-2 span:hover::after {
+            width: 60%;
+        }
+
+        .box-1 {
+            width: 285px;
+            height: 320px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        .box-1:hover {
+            box-shadow: 0 4px 5px #E23744;
+        }
+
+        .box-1 div {
+            position: absolute;
+            background: linear-gradient(transparent, black);
+            width: 100%;
+            height: 25%;
+            display: flex;
+            align-items: flex-end;
+            bottom: 0;
+        }
+
+        .box-1 div span:first-child {
+            display: inline-block;
+            color: white;
+            padding-left: 15px;
+            font-size: 1rem;
+            padding-bottom: 10px;
+        }
+
+        .box-1 i {
+            color: white;
+            padding-bottom: 15px;
+        }
+
+        .box-1 img {
+            width: 285px;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .sec-3 {
+            display: flex;
+            margin-top: 30px;
+            margin-bottom: 130px;
+            justify-content: space-between;
+        }
+
+        .middle h1 {
+            font-size: 2.1rem;
+            font-weight: lighter;
+            text-align: center;
+            margin: 50px;
+            color: rgb(56, 56, 56);
+        }
+
+        .middle h1 strong {
+            font-weight: bold;
+        }
+
+        .sec-4 {
+            display: grid;
+            justify-content: center;
+            grid-column-gap: 20px;
+            grid-row-gap: 30px;
+            grid-template-columns: 340px 340px 340px;
+            grid-template-rows: auto;
+        }
+
+        .box-2 {
+            border: 1px solid rgb(235, 233, 233);
+            box-shadow: 0 1px 3px rgb(226, 223, 223);
+            width: 340px;
+            height: 60px;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .box-2 div {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin: 20px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .box-2 div span {
+            color: rgb(65, 64, 64);
+            font-size: 1.2rem;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            transition: 0.3s ease;
+        }
+
+        .box-2:hover {
+            transform: scale(1.1);
+            box-shadow: 0 1px 1px #E23744;
+        }
+
+        .sec-5 {
+            display: flex;
+            background-color: rgb(255, 248, 248);
+            margin: 90px 0;
+            padding: 40px 0;
+            justify-content: center;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .contact {
+            width: 760px;
+            overflow: hidden;
+        }
+
+        .contact img {
+            width: 250px;
+            height: 450px;
+            padding-right: 40px;
+        }
+
+        .address {
+            width: 470px;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+
+        .address p {
+            color: rgb(92, 91, 91);
+            padding-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .address h2 {
+            font-size: 2.7rem;
+            color: rgb(34, 34, 34);
+            font-weight: lighter;
+            margin-bottom: 20px;
+        }
+
+        .radio {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 230px;
+            padding-bottom: 20px;
+        }
+
+        .radio label {
+            color: rgb(49, 49, 49);
+            font-size: 1.1rem;
+        }
+
+        .radio [type="radio"] {
+            accent-color: rgb(255, 92, 92);
+        }
+
+        .email {
+            position: relative;
+        }
+
+        .email input {
+            width: 270px;
+            height: 46px;
+            border-radius: 5px;
+            border: 1px solid rgb(184, 183, 183);
+            outline: rgb(255, 92, 92);
+            font-size: 1.3rem;
+            padding-left: 15px;
+        }
+
+        .place {
+            position: absolute;
+            top: 13px;
+            left: 15px;
+            font-size: 1.3rem;
+            color: gray;
+        }
+
+        .email button {
+            width: 150px;
+            border-radius: 6px;
+            background-color: rgb(253, 104, 104);
+            border: 1px solid rgb(253, 104, 104);
+            padding-left: 6px;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .email button:hover {
+            background-color: #C3212E;
+        }
+
+        .download {
+            font-size: 0.7rem;
+            color: gray;
+            margin-top: 27px;
+            margin-bottom: 0;
+        }
+
+        .app img {
+            width: 137px;
+            height: 40px;
+        }
+
+        .sec-6 {
+            margin-bottom: 100px;
+        }
+
+        .sec-6 h1 {
+            font-size: 1.9rem;
+            color: rgb(31, 31, 31);
+            font-weight: lighter;
+        }
+
+        .sec-6 h4 {
+            font-size: 1.3rem;
+            color: rgb(31, 31, 31);
+            font-weight: lighter;
+            margin-bottom: 25px;
+        }
+
+        .sec-6 a {
+            text-decoration: none;
+            color: gray;
+            font-size: 0.95rem;
+        }
+
+        .sec-6 i {
+            font-size: 0.3rem;
+            color: gray;
+            padding: 6px 5px;
+        }
+
+        .end {
+            margin: 0 150px;
+        }
+
+        .end-column a {
+            width: 190px;
+            font-size: 1rem;
+            font-weight: lighter;
+            display: inline-block;
+            margin: 15px 0;
+            transition: 0.4s ease-in;
+        }
+
+        .end-column a:hover {
+            transform: scale(1.1);
+        }
+
+        .first img {
+            width: 128px;
+            height: 32px;
+        }
+
+        .sec-7 {
+            padding: 40px 120px;
+            background-color: rgb(244, 244, 253);
+        }
+
+        .first {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .first-1 {
+            display: flex;
+        }
+
+        .first-1 span {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-right: 20px;
+            font-weight: 400;
+            transition:0.3s ease;
+        }
+        .first-1 span:hover{
+            box-shadow: 0 1px 2px #E23744;
+        }
+
+        .second {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+
+        .second div {
+            width: 200px;
+        }
+
+        .second h4 {
+            font-weight: lighter;
+            color: rgb(22, 22, 22);
+            white-space: nowrap;
+        }
+
+        .second a {
+            display: inline-block;
+            text-decoration: none;
+            color: gray;
+            width: 200px;
+            margin-bottom: 7px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            transition:0.3s ease
+        }
+        .second a:hover{
+            color:#E23744;
+        }
+
+        .social {
+            display: flex;
+        }
+
+        .social a {
+            width: 30px;
+            color: black;
+            transition:0.3s ease;
+        }
+        .social a:hover{
+            transform: scale(1.2);
+        }
+
+        .second img {
+            width: 137px;
+            height: 40px;
+            margin-top: 11px;
+            cursor: pointer;
+        }
+
+        .box-4 i {
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .third {
+            padding: 10px 0;
+            color: gray;
+            font-size: 0.9rem;
+            line-height: 20px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="heading">
+                <h2>Get App</h2>
+            </div>
+            <ul class="nav-bar">
+                <li><a href="addrestraunt.html" class="nav-link">Add Restraunt</a></li>
+                <li><a href="login.html" class="nav-link">Log IN</a></li>
+                <li><a href="signup.html" class="nav-link">Sign UP</a></li>
+                <li><a href="home.html" class="nav-link">HOME</a></li>
+            </ul>
+        </div>
+        <div class="head">
+            <div class="image">
+                <img src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" alt=""
+                    height="90">
+            </div>
+            <div class="disc">
+                <h2>Discover the best food & drinks in Delhi NCR</h2>
+            </div>
+            <div class="search">
+                <p class="par"><i class="fa-solid fa-location-dot"></i> Ywca, 1,Ashoka Rd, Hanu</p>
+
+                <div class="ig"><input type="text" placeholder="Search for Restraunt cuisine or a dish"></div>
+            </div>
+            <div class="line">|</div>
+            <div class="par2"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="btnn">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
+        </div>
+        <div class="header-image">
+            <img src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png" alt=""
+                height="751">
+        </div>
+    </header>
+
+    <section class="sec-1">
+        <div class="box">
+            <div class="white">
+                <p>Order Food Online</p>
+            </div>
+            <img src="https://b.zmtcdn.com/webFrontend/64dffaa58ffa55a377cdf42b6a690e721585809275.png?fit=around|402:360&crop=402:360;*,*"
+                alt="">
+        </div>
+
+        <div class="box">
+            <div class="white">
+                <p>Go out for a meal</p>
+            </div>
+            <img src="https://b.zmtcdn.com/webFrontend/95f005332f5b9e71b9406828b63335331585809309.png?fit=around|402:360&crop=402:360;*,*"
+                alt="">
+        </div>
+
+        <div class="box">
+            <div class="white">
+                <p>Zomato Pro</p>
+            </div>
+            <img src="https://b.zmtcdn.com/webFrontend/b256d0dd8a29f9e0623ecaaea910534d1585809352.png?fit=around|402:360&crop=402:360;*,*"
+                alt="">
+        </div>
+
+        <div class="box">
+            <div class="white">
+                <p>Nightlife & Clubs</p>
+            </div>
+            <img src="https://b.zmtcdn.com/webFrontend/8ff4212b71b948ed5b6d2ce0d2bc99981594031410.png?fit=around|402:360&crop=402:360;*,*"
+                alt="">
+        </div>
+    </section>
+
+    <section class="middle">
+        <div class="sec-2">
+            <h2>Collections</h2>
+            <div>
+                <h6>Explore curated lists of top restraunts, cafes, pubs and bars in Delhi NCR, based on trends</h6>
+                <span>All Collection in Delhi NCR &nbsp; <i class="fas fa-caret-right"></i></span>
+            </div>
+        </div>
+
+        <div class="sec-3">
+            <div class="box-1">
+                <div><span>Newly Opened <br> 17 Places</span><i class="fas fa-caret-right"></i></div>
+                <img src="https://s3-rd-prod.chicagobusiness.com/styles/crop_freeform/s3/Bar%20Mar_2670%20(1)_0.jpg"
+                    alt="">
+            </div>
+
+            <div class="box-1">
+                <div><span>Trending this Week <br> 30 Places</span><i class="fas fa-caret-right"></i></div>
+                <img src="https://images.lifestyleasia.com/wp-content/uploads/sites/5/2024/01/27010023/Snapinsta.app_20479221_123416871613084_2082623160724750336_n_1080-806x806.jpg"
+                    alt="">
+            </div>
+
+            <div class="box-1">
+                <div><span>Best of Delhi NCR <br> 157 Places</span><i class="fas fa-caret-right"></i></div>
+                <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/02/India-Gate.jpg" alt="">
+            </div>
+
+            <div class="box-1">
+                <div><span>Great cafes <br> 28 Places</span><i class="fas fa-caret-right"></i></div>
+                <img src="https://b.zmtcdn.com/data/collections/9947b8cfe56422abae280ed1dbf3b5c8_1709812287.jpg" alt="">
+            </div>
+        </div>
+        <h1>Popular localities in & around <strong>Delhi NCR</strong></h1>
+        <div class="sec-4">
+            <div class="box-2">
+                <div><span>Cannught Place Sector-1 (387 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Sector 29 (287 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Sector 18, Noida (286 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Rajaouri Garden (661 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Saket (638 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>DLF Cyber City (218 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Golf Course Road (267 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>DLF Phase 4 (781 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Delhi University GTB-Nagar (700 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Indirapuram (1962 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Vasant Kunj (929 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Greater Kailash-1 (GK-1) (360 places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Chanakyapuri (128 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Rohini Nagar (2775 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+            <div class="box-2">
+                <div><span>Janpath (54 Places)<i class="fas fa-chevron-right"></i></span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-5">
+        <div class="flex contact">
+            <img src="https://b.zmtcdn.com/data/pro/5722d9e687511d79616bcab92470734e1596187147.png" alt="">
+            <div class="address">
+                <h2>Get The Zomato App</h2>
+                <p>We will send you a link, open it on your Phone to get the app</p>
+                <div class="flex radio">
+                    <div>
+                        <input type="radio" name="fill" id="email" checked>
+                        <label for="email">Email</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="fill" id="phone" checked>
+                        <label for="phone">Phone</label>
+                    </div>
+                </div>
+                <div class="flex email">
+                    <input class="input" type="text">
+                    <label for="" class="place">Email</label>
+                    <button>Share App Link</button>
+                </div>
+                <p>Diwnload App from</p>
+                <div class="flex app">
+                    <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="">
+                    <img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="end">
+        <div class="sec-6">
+            <h1>Explore other options for you here</h1>
+            <h4>Popular cuisines near me</h4>
+            <a href="#">Bakery food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Beverages food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Biryani food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Burger food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Chienese food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Contienental food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Deserts food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Ice Cream food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Italian food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Kebab food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Mithai food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Momos food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Mughlai food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">North Indian food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Pizza food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Rolls food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Sandwich food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Shake food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">South Indian food near me</a>
+            <i class="fas fa-circle"></i>
+
+            <a href="#">Street food near me</a>
+            <i class="fas fa-circle"></i>
+        </div>
+
+        <div class="sec-6">
+            <h4>Popular restruants types near me</h4>
+            <div>
+                <a href="#">Street food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Beverages food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Biryani food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Burger food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Chienese food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Contienental food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Deserts food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Ice Cream food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Italian food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Kebab food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Mithai food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Momos food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Mughlai food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">North Indian food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Pizza food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Rolls food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Sandwich food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Shake food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">South Indian food near me</a>
+                <i class="fas fa-circle"></i>
+
+                <a href="#">Street food near me</a>
+                <i class="fas fa-circle"></i>
+            </div>
+        </div>
+
+        <div class="sec-6">
+            <h4>Top Restraunts Chains</h4>
+            <div class="end-column">
+                <a href="">Bikanerwala</a>
+                <a href="">Domino's</a>
+                <a href="">krispy kreme</a>
+                <a href="">Pizza Hut</a>
+                <a href="">Burger king</a>
+                <a href="">Biryani Blues</a>
+                <a href="">Dunkin's Donuts</a>
+                <a href="">MacDonald's</a>
+                <a href="">Sagar Ratna</a>
+                <a href="">BTW</a>
+                <a href="">Faasos</a>
+                <a href="">Moti Mahal Delux</a>
+                <a href="">Haldiram's</a>
+                <a href="">Subway</a>
+            </div>
+        </div>
+        <div class="sec-6">
+            <h4>Cities We deliver To</h4>
+            <div class="end-column">
+                <a href="">Delhi NCR</a>
+                <a href="">Rajasthan</a>
+                <a href="#">Mumbai</a>
+                <a href="#">Pune</a>
+                <a href="#">Bangalore</a>
+                <a href="#">Hyderabad</a>
+                <a href="#">Chennai</a>
+                <a href="#">Kolkata</a>
+                <a href="#">Ahmedabad</a>
+                <a href="#">Surat</a>
+                <a href="#">Lucknow</a>
+                <a href="#">Kanpur</a>
+                <a href="#">Bhopal</a>
+                <a href="#">Indore</a>
+                <a href="#">Nagpur</a>
+                <a href="#">Patna</a>
+                <a href="#">Ranchi</a>
+                <a href="#">Guwahati</a>
+                <a href="#">Chandigarh</a>
+                <a href="#">Ludhiana</a>
+                <a href="#">Amritsar</a>
+                <a href="#">Jalandhar</a>
+                <a href="#">Coimbatore</a>
+                <a href="#">Madurai</a>
+                <a href="#">Visakhapatnam</a>
+                <a href="#">Vijayawada</a>
+                <a href="#">Thiruvananthapuram</a>
+                <a href="#">Kochi</a>
+                <a href="#">Mangalore</a>
+                <a href="#">Hubli</a>
+                <a href="#">Jamshedpur</a>
+                <a href="#">Bhavnagar</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="sec-7">
+            <div class="first">
+                <div>
+                    <img src="https://ops.runnr.in/assets/zomato_logo_black-72e759139bb73d92afb5f8ae0b2485b7cb023a5474859f2b6e22fdd8b83d2fc0.png"
+                        alt="">
+                </div>
+                <div class="first-1">
+                    <div>
+                        <span>India</span>
+                    </div>
+                    <div>
+                        <span>English</span>
+                    </div>
+                </div>
+            </div>
+            <div class="second">
+                <div>
+                    <h4>Comapany</h4>
+                    <a href="#">Who we are</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Report Fraud</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Investors Relations</a>
+                </div>
+                <div>
+                    <h4>for Foodies</h4>
+                    <a href="#">Code of Conduct</a>
+                    <a href="#">Community</a>
+                    <a href="#">Blogger Help</a>
+                    <a href="#">Mobile Apps</a>
+                </div>
+                <div>
+                    <h4>For Restruants</h4>
+                    <a href="#">Add Restrunt</a>
+                    <h4>For Enterprises</h4>
+                    <a href="#">Zomato for Work</a>
+                </div>
+                <div>
+                    <h4>For You</h4>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Security</a>
+                    <a href="#">Sitemap</a>
+                </div>
+                <div class="box-4">
+                    <h4>Social Links</h4>
+                    <div class="social">
+                        <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="">
+                    <img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="">
+                </div>
+            </div>
+            <hr>
+            <p class="third">&copy; By Kartik Rawat.Continuing past this page You agree to our Terms and Service | Cookies
+                Policy | Privacy Policy | Content Policies.This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+        </div>
+    </section>
+</body>
+
+</html>

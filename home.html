@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>video in html</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+        
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .video {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        @media (min-aspect-ratio:16/9) {
+            .video {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-aspect-ratio:16/9) {
+            .video {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        .content {
+            width: 700px;
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 60px 300px;
+        }
+
+        .image h1 {
+            font-size: 5.5rem;
+            color: white;
+            margin: 20px 0;
+            font-weight: bolder;
+            width: 500px;
+            position: absolute;
+            float: left;
+            top: 110px;
+            left: 513px;
+            height: 1px;
+            font-family: Helvetica;
+            /* font-style: italic; */
+            transition: 0.3s ease;
+        }
+
+        .image h1:hover {
+            color: #C3212E;
+        }
+
+        .image2 h1 {
+            font-size: 5.5rem;
+            color: white;
+            margin: 20px 0;
+            font-weight: bolder;
+            width: 500px;
+            position: absolute;
+            float: left;
+            top: 212px;
+            left: 474px;
+            height: 140px;
+            font-family: Helvetica;
+            /* font-style: italic; */
+        }
+
+        .image3 h2 {
+            font-size: 4.5rem;
+            color: white;
+            margin: 20px 0;
+            font-weight: bolder;
+            width: 792px;
+            position: absolute;
+            float: left;
+            top: 305px;
+            left: 376px;
+            height: 140px;
+            font-family: Helvetica;
+            /* font-style: italic; */
+        }
+
+        .cnn1 {
+            width: 459px;
+            height: 45px;
+            position: absolute;
+            top: 420px;
+        }
+
+        .cnn1 p {
+            color: #fff;
+            font-family: Helvetica;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            line-height: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .cnn1 p:focus {
+            outline: none;
+        }
+
+        .image-1 {
+            width: 165px;
+            height: 51px;
+            overflow: hidden;
+            position: absolute;
+            top: 530px;
+            left: 462px;
+            border-radius: 5px;
+            border: 1px solid white;
+            transition: 0.3s ease;
+        }
+
+        .image-1 img {
+            width: 165px;
+            height: 51px;
+            object-fit: cover;
+        }
+
+        .image-1:hover {
+            transform: scale(1.1);
+        }
+
+        .image-2 {
+            width: 165px;
+            height: 50px;
+            overflow: hidden;
+            position: absolute;
+            top: 530px;
+            left: 697px;
+            border-radius: 5px;
+            border: 1px solid white;
+            transition: 0.3s ease;
+        }
+
+        .image-2:hover {
+            transform: scale(1.1);
+        }
+
+        .image-2 img {
+            width: 165px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        .wrapper {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.25)40%, rgba(0, 0, 0, 0.25)40%);
+            height: 110vh;
+        }
+
+        .scroll {
+            width: 170px;
+            height: 40px;
+            position: absolute;
+            top: 660px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .scroll a {
+            text-decoration: none;
+        }
+
+        .scroll h2 {
+            color: #fff;
+            font-weight: bolder;
+            text-decoration: none;
+            font-family: Helvetica;
+            transition: 0.3s ease;
+        }
+        .scroll h2:hover{
+            color:#C3212E;
+        }
+        
+        .typewriter {
+            font-family: monospace;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid white;
+            width: 0;
+            display: inline-block;
+
+                                 /* for looping animation */
+            animation: typing 3s steps(22, end) 1s infinite alternate, blink 0.7s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 176px;
+            }
+        }
+        /* Blinking cursor effect */
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="video">
+            <div class="container">
+                <video class="video" autoplay loop controls muted>
+                    <source src="zomato3.mp4">
+                </video>
+            </div>
+        </div>
+        <div class="content">
+            <div class="image">
+                <h1>Zomato</h1>
+            </div>
+            <div class="image2">
+                <h1>India's #1</h1>
+            </div>
+            <div class="image3">
+                <h2>food delievery app</h2>
+            </div>
+
+            <div class="cnn1">
+                <p>Experience fast & easy online ordering on the Zomato app</p>
+            </div>
+
+            <div class="image-1">
+                <img src="appstore.png" alt="">
+            </div>
+            <div class="image-2">
+                <img src="playstore.png" alt="">
+            </div>
+
+            <div class="scroll">
+                <a href="index.html">
+                    <h2 class="typewriter">Scroll down <i class="fa-solid fa-angle-down"></i></h2>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

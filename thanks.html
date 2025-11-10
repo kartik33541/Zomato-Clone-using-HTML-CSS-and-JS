@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thank You!</title>
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #222;
+        }
+
+        .thank-you-container {
+            text-align: center;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.7s ease-in-out;
+            max-width: 400px;
+        }
+
+        .thank-you-container h1 {
+            font-size: 2.5rem;
+            color: #e23744;
+            margin-bottom: 10px;
+        }
+
+        .thank-you-container p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .heart {
+            font-size: 2rem;
+            animation: beat 1s infinite;
+            margin-bottom: 30px;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: #e23744;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            transition: background 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #c82335;
+        }
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes beat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="thank-you-container">
+        <h1>Thank You!</h1>
+        <p>Your restaurant details have been submitted successfully.</p>
+        <div class="heart">❤️</div>
+        <a href="index.html" class="home-button">Back to Home</a>
+    </div>
+</body>
+
+</html>

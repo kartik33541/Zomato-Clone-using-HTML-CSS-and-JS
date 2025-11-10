@@ -2,297 +2,203 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign UP - Zomato</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign UP - Zomato</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .wrapper {
-            height: 100vh;
-            width: 100%;
-            background-color: #e23744;
-        }
+    body {
+      font-family: Helvetica;
+      background-color: #e23744;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-        .navbar {
-            width: 100%;
-            height: 90px;
-            float: left;
-        }
+    .navbar h1 {
+      color: white;
+      font-size: 45px;
+      font-weight: bolder;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-        .navbar h1 {
-            color: white;
-            font-size: 45px;
-            font-weight: bolder;
-            font-family: Helvetica;
-            font-style: italic;
-            margin-left: 503px;
-            margin-top: 23px;
-        }
+    .navbar hr {
+      border: none;
+      border-top: 3px solid white;
+      width: 60%;
+      margin: 0 auto 20px;
+    }
 
-        .navbar h2 {
-            width: 392px;
-            height: 3px;
-            position: absolute;
-            left: 567px;
-            top: 86px;
-        }
+    .form2 h2 {
+      text-align: center;
+      font-size: 34px;
+      color: #333;
+      margin-bottom: 10px;
+    }
 
-        .navbar h2 hr {
-            color: aliceblue;
-            font-weight: bolder;
-            font-size: 3px;
-        }
+    .label hr {
+      border: none;
+      border-top: 3px solid white;
+      width: 60%;
+      margin: 0 auto 25px;
+    }
 
-        .form2 h2 {
-            width: 150px;
-            height: 40px;
-            font-size: 34px;
-            position: absolute;
-            top: 101px;
-            left: 714px;
-            font-family: Helvetica;
-            color: #333;
-        }
+    .form1 {
+      width: 400px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 3px #333;
+      padding: 30px 20px;
+      text-align: center;
+    }
 
-        .label h2 {
-            width: 392px;
-            height: 3px;
-            position: absolute;
-            left: 567px;
-            top: 153px;
-        }
+    .srch-1,
+    .srch-2,
+    .srch-3,
+    .srch-4 {
+      text-align: left;
+      margin-bottom: 20px;
+    }
 
-        .label h2 hr {
-            color: aliceblue;
-            font-weight: bolder;
-            font-size: 3px;
-        }
+    label {
+      font-size: 16px;
+      color: #333;
+      display: block;
+      margin-bottom: 5px;
+    }
 
-        .form1 {
-            width: 392px;
-            height: 450px;
-            background: white;
-            position: absolute;
-            top: 170px;
-            left: 566px;
-            border-radius: 10px;
-            box-shadow: 0 2px 3px #333;
-        }
+    .srch1,
+    .srch2,
+    .srch3,
+    .srch4 {
+      width: 100%;
+      height: 44px;
+      font-size: 16px;
+      color: black;
+      padding: 8px 10px;
+      border-radius: 7px;
+      border: 1px solid gray;
+      box-shadow: 0 1px 2px gray;
+      transition: 0.3s ease;
+    }
 
-        .srch-1 {
-            width: 340px;
-            height: 50px;
-            margin-top: 15px;
-            margin-left: 10px;
-        }
+    .srch1:hover,
+    .srch2:hover,
+    .srch3:hover,
+    .srch4:hover {
+      box-shadow: 0 2px 3px #e23744;
+    }
 
-        .srch-1 label {
-            font-size: 16px;
-            color: #333;
-            /* font-weight: 800; */
-            font-family: Helvetica;
-        }
+    .btn {
+      width: 100%;
+      height: 45px;
+      background-color: #e23744;
+      border-radius: 7px;
+      border: 1px solid gray;
+      color: white;
+      font-weight: bolder;
+      font-size: 16px;
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
 
-        .srch1 {
-            width: 260px;
-            height: 44px;
-            font-size: 16px;
-            color: black;
-            margin-left: 8px;
-            border-radius: 7px;
-            border: 1px solid gray;
-            box-shadow: 0 1px 2px gray;
-            transition: 0.3s ease;
-        }
+    .btn:hover {
+      background-color: #b5222f;
+      transform: scale(1.05);
+    }
 
-        .srch-2,
-        .srch-3,
-        .srch-4 {
-            width: 340px;
-            height: 50px;
-            margin-top: 15px;
-            margin-left: 10px;
-        }
+    .label1 {
+      width: 100%;
+      margin-top: 20px;
+      color: #e23744;
+      text-align: center;
+    }
 
-        .srch-2 label {
-            font-size: 16px;
-            color: #333;
-            /* font-weight: 800; */
-            font-family: Helvetica;
-        }
+    .liw {
+      text-align: center;
+      font-size: 17px;
+      margin-top: 25px;
+      color: #333;
+    }
 
-        .srch2 {
-            width: 260px;
-            height: 44px;
-            font-size: 16px;
-            color: black;
-            margin-left: 8px;
-            border-radius: 7px;
-            border: 1px solid gray;
-            box-shadow: 0 1px 2px gray;
-            transition: 0.3s ease;
-        }
+    .liw span a {
+      text-decoration: none;
+      color: #e23744;
+      font-weight: bolder;
+    }
 
-        .srch-3 label {
-            font-size: 16px;
-            color: #333;
-            /* font-weight: 800; */
-            font-family: Helvetica;
-        }
-
-        .srch3 {
-            width: 230px;
-            height: 44px;
-            font-size: 16px;
-            color: black;
-            margin-left: 8px;
-            border-radius: 7px;
-            border: 1px solid gray;
-            box-shadow: 0 1px 2px gray;
-            transition: 0.3s ease;
-        }
-
-        .srch3:hover {
-            box-shadow: 0 2px 3px #e23744;
-        }
-
-        .srch1:hover {
-            box-shadow: 0 2px 3px #e23744;
-        }
-
-        .srch2:hover {
-            box-shadow: 0 2px 3px #e23744;
-        }
-
-        .srch-4 label {
-            font-size: 16px;
-            color: #333;
-            /* font-weight: 800; */
-            font-family: Helvetica;
-        }
-
-        .srch4 {
-            width: 180px;
-            height: 44px;
-            font-size: 16px;
-            color: black;
-            margin-left: 8px;
-            border-radius: 7px;
-            border: 1px solid gray;
-            box-shadow: 0 1px 2px gray;
-            transition: 0.3s ease;
-        }
-
-        .srch4:hover {
-            box-shadow: 0 2px 3px #e23744;
-        }
-
-        .btn {
-            width: 287px;
-            height: 41px;
-            margin-left: 42px;
-            margin-top: 22px;
-            background-color: #e23744;
-            border-radius: 7px;
-            transition: 0.3s ease;
-            color: white;
-            font-family: Helvetica;
-            font-weight: bolder;
-            font-size: 16px;
-            border: 1px solid gray;
-        }
-
-        .btn:hover {
-            background-color: #b5222f;
-            transform: scale(1.1);
-        }
-
-        .label1 {
-            width: 287px;
-            height: 3px;
-            margin-top: 20px;
-            margin-left: 40px;
-        }
-
-        .label1 h2 {
-            color: #e23744;
-        }
-
-        .liw {
-            width: 300px;
-            height: 40px;
-            margin-left: 60px;
-            margin-top: 35px;
-            font-size: 17px;
-            font-family: Helvetica;
-        }
-
-        .liw span {
-            margin-left: 4px;
-        }
-
-        .liw span a {
-            text-decoration: none;
-            color: #e23744;
-            font-weight: bolder;
-        }
-    </style>
+    .liw span a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="navbar">
-            <h1>Zomato-Order food Online</h1>
-            <h2>
-                <hr>
-            </h2>
-        </div>
-        <div class="form2">
-            <h2>Sign UP</h2>
-        </div>
-        <div class="label">
-            <h2>
-                <hr>
-            </h2>
-        </div>
+  <div class="navbar">
+    <h1>Zomato - Order food Online</h1>
+    <hr>
+  </div>
 
-        <div class="form1">
-            <form action="https://formsubmit.co/kartik.24bet10014@vitbhopal.ac.in" method="POST">
-                <!-- Disable FormSubmit captcha -->
-                <input type="hidden" name="_captcha" value="false">
+  <div class="form2">
+    <h2>Sign UP</h2>
+  </div>
 
-                <!-- Redirect after successful submit -->
-                <input type="hidden" name="_next" value="https://kartik33541.github.io/Zomato-Clone-using-HTML-CSS-and-JS/thanks.html">
+  <div class="label">
+    <hr>
+  </div>
 
-                <div class="srch-1">
-                    <label for="Name">Name:</label>
-                    <input class="srch1" id="name" name="name" type="text" placeholder="Enter your name here" required>
-                </div>
-                <div class="srch-2">
-                    <label for="email">Email:</label>
-                    <input class="srch2" id="email" name="email" type="email" placeholder="Enter email here" required>
-                </div>
-                <div class="srch-3">
-                    <label for="password">Password:</label>
-                    <input class="srch3" id="password" name="password" type="password" placeholder="Enter password here"
-                        required>
-                </div>
-                <div class="srch-4">
-                    <label for="confirm_password">Confirm Password:</label>
-                    <input class="srch4" id="confirm_password" name="confirm_password" type="password"
-                        placeholder="Confirm password here" required>
-                </div>
+  <div class="form1">
+    <!-- Added id for JS -->
+    <form id="signupForm" action="https://formsubmit.co/kartik.24bet10014@vitbhopal.ac.in" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://kartik33541.github.io/Zomato-Clone-using-HTML-CSS-and-JS/thanks.html">
 
-                <button class="btn" type="submit">Sign Up</button>
-            </form>
+      <div class="srch-1">
+        <label for="name">Name:</label>
+        <input class="srch1" id="name" name="name" type="text" placeholder="Enter your name here" required>
+      </div>
 
-        </div>
-    </div>
+      <div class="srch-2">
+        <label for="email">Email:</label>
+        <input class="srch2" id="email" name="email" type="email" placeholder="Enter email here" required>
+      </div>
+
+      <div class="srch-3">
+        <label for="password">Password:</label>
+        <input class="srch3" id="password" name="password" type="password" placeholder="Enter password here" required>
+      </div>
+
+      <div class="srch-4">
+        <label for="confirm_password">Confirm Password:</label>
+        <input class="srch4" id="confirm_password" name="confirm_password" type="password"
+          placeholder="Confirm password here" required>
+      </div>
+
+      <button class="btn" type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <script>
+    // Optional: Add confirmation before redirect (without blocking email send)
+    const form = document.getElementById("signupForm");
+
+    form.addEventListener("submit", function () {
+      // Save some info in local storage (optional)
+      localStorage.setItem("username", document.getElementById("name").value);
+      localStorage.setItem("useremail", document.getElementById("email").value);
+
+      // No preventDefault() — allow form to send email and redirect
+    });
+  </script>
 </body>
 
 </html>
